@@ -1,0 +1,14 @@
+{
+  "routes": [
+    {
+      "route": "/vl-console-8x2/*",
+      "allowedRoles": ["authenticated"]
+    }
+  ],
+  "responseOverrides": {
+    "401": {
+      "redirect": "/.auth/login/aad?post_login_redirect_uri=/vl-console-8x2/",
+      "statusCode": 302
+    }
+  }
+}
